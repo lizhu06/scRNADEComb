@@ -266,7 +266,7 @@ scRNADEComb <- function(count, x, sample_id=NULL,
 		cat("Start DESeq2.\n")
 		t0 <- proc.time()[3]
 		#res <- DESeq2_f(count, x, ncores)
-		res <- tryCatch(DESeq_f(count, x, ncores), 
+		res <- tryCatch(DESeq2_f(count, x, ncores), 
 			error=function(e) {
 				cat(paste0("Error in fitting DESeq2 with following error message: \n", 
 					e$message, "\n"))
